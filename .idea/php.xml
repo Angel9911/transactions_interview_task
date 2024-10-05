@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MessDetectorOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PHPCSFixerOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PHPCodeSnifferOptionsConfiguration">
+    <option name="highlightLevel" value="WARNING" />
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/composer/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/composer/fidry/cpu-core-counter" />
+      <path value="$PROJECT_DIR$/vendor/composer/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/vendor/composer/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/composer/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/composer/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/composer/evenement/evenement" />
+      <path value="$PROJECT_DIR$/vendor/composer/friendsofphp/php-cs-fixer" />
+      <path value="$PROJECT_DIR$/vendor/composer/react/cache" />
+      <path value="$PROJECT_DIR$/vendor/composer/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/composer/react/child-process" />
+      <path value="$PROJECT_DIR$/vendor/composer/react/dns" />
+      <path value="$PROJECT_DIR$/vendor/composer/react/event-loop" />
+      <path value="$PROJECT_DIR$/vendor/composer/react/promise" />
+      <path value="$PROJECT_DIR$/vendor/composer/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/composer/react/socket" />
+      <path value="$PROJECT_DIR$/vendor/composer/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/composer/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/composer/react/stream" />
+      <path value="$PROJECT_DIR$/vendor/composer/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/composer/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/composer/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/composer/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/composer/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/vendor/composer/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/composer/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/composer/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/composer/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/composer/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/composer/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/vendor/composer/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/composer/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/composer/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/vendor/composer/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/composer/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/composer/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/composer/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/composer/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/composer/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/composer/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/vendor/composer/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/composer/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/composer/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/composer/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/composer/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/composer/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/composer/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/composer/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/vendor/composer/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/vendor/composer/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/composer/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/composer/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/vendor/composer/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/composer/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/composer/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/composer/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/composer/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/vendor/composer/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/composer/phpstan/phpdoc-parser" />
+      <path value="$PROJECT_DIR$/vendor/composer/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/composer/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/composer/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/composer/sebastian/type" />
+      <path value="$PROJECT_DIR$/vendor/composer/composer" />
+      <path value="$PROJECT_DIR$/vendor/composer/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/composer/clue/ndjson-react" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />
+  <component name="PhpStanOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/vendor/autoload.php" />
+    </phpunit_settings>
+  </component>
+  <component name="PsalmOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+</project>
