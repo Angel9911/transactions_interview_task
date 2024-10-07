@@ -7,12 +7,28 @@ use Interview\CommissionTask\Service\private_lib\TransactionOperation;
 
 $config = require __DIR__ . '/config/config.ini.php';
 
-$csvTransactionFile = new CSVTransactionFile();
+$file = 'example'; // default filename
 
-$transactions = $csvTransactionFile->readFile('example');
+if(isset($_SERVER['argv'][1])){
 
-$transactionsFees = TransactionOperation::calculateTransactions($transactions);
+    $file = $_SERVER['argv'][1];
 
-foreach ($transactionsFees as $transactionFee) {
-    echo $transactionFee.PHP_EOL;
+    $fileName = explode('.', $file);
+
+    // if the file type is CSV
+    if($fileName[1] === 'csv'){
+
+        $csvTransactionFile = new CSVTransactionFile();
+
+        $transactions = $csvTransactionFile->readFile($fileName[0]);
+    }
+
+    if(!empty($transactions)){
+
+        $transactionsFees = TransactionOperation::calculateTransactions($transactions);
+
+        foreach ($transactionsFees as $transactionFee) {
+            echo $transactionFee.PHP_EOL;
+        }
+    }
 }
