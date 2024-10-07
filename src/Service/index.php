@@ -2,8 +2,8 @@
 
 require __DIR__ . '/../../vendor/composer/autoload.php';
 
-use \Interview\CommissionTask\Service\private_lib\CSVTransactionFile;
-use \Interview\CommissionTask\Service\models\TransactionOperation;
+use Interview\CommissionTask\Service\private_lib\CSVTransactionFile;
+use Interview\CommissionTask\Service\private_lib\TransactionOperation;
 
 $config = require __DIR__ . '/config/config.ini.php';
 

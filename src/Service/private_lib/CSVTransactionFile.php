@@ -9,6 +9,7 @@ use Interview\CommissionTask\Service\models\PrivateCustomer;
 use Interview\CommissionTask\Service\models\Transaction;
 use Interview\CommissionTask\Service\validators\Validation;
 
+
 class CSVTransactionFile implements TransactionFileInterface
 {
     /**
@@ -17,11 +18,11 @@ class CSVTransactionFile implements TransactionFileInterface
      * @param string $fileType
      * @return array
      */
-    public function readFile($fileName, string $fileType = '.csv'): array
+    public function readFile($fileName, string $fileType = 'csv'): array
     {
         $transactions = array();
 
-        if(($handle = fopen($GLOBALS['config']['path_to_file'].$fileName.$fileType, 'r')) !== false){
+        if(($handle = fopen($GLOBALS['config']['path_to_file'].$fileName . '.' . $fileType, 'r')) !== false){
 
             while (($data = fgets($handle,1000)) !== false){
 

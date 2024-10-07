@@ -3,18 +3,15 @@
 namespace Interview\Tests\Service\private_lib;
 
 use Interview\CommissionTask\Service\models\BusinessCustomer;
-use Interview\CommissionTask\Service\models\Customer;
 use Interview\CommissionTask\Service\models\PrivateCustomer;
 use Interview\CommissionTask\Service\models\Transaction;
-use Interview\CommissionTask\Service\models\TransactionOperation;
+use Interview\CommissionTask\Service\private_lib\TransactionOperation;
 use PHPUnit\Framework\TestCase;
 
 class TransactionOperationTest extends TestCase
 {
     private $privateCustomerTransactions = [];
     private $businessCustomerTransactions = [];
-    private $transaction;
-    private $customer;
 
     public function setUp(): void
     {
@@ -33,6 +30,28 @@ class TransactionOperationTest extends TestCase
         $this->businessCustomerTransactions[] = $this->generateTransaction($businessCustomer,'deposit', 'EUR', 10000.00, '10.1.2016');
     }
 
+    public function tearDown(): void
+    {
+        $this->privateCustomerTransactions = [];
+        $this->businessCustomerTransactions = [];
+
+    }
+    public function testCalculateAllTransactions()
+    {
+
+        $allTransactions = array_merge($this->privateCustomerTransactions,$this->businessCustomerTransactions);
+
+        $actualTransactionsFees = TransactionOperation::calculateTransactions($allTransactions);
+
+        $expectedTransactionsFess = ['0.60', '3.00', '0', '0.06','1.50', '3.00'];
+
+        $this->assertEquals(
+            $expectedTransactionsFess,
+            $actualTransactionsFees
+        );
+
+    }
+
     public function testCalculatePrivateCustomerTransactions()
     {
 
@@ -40,6 +59,10 @@ class TransactionOperationTest extends TestCase
 
         $expectedTransactionsFess = ['0.60', '3.00', '0', '0.06'];
 
+        $this->assertCount(
+            count($expectedTransactionsFess),
+            $actualTransactionsFees
+        );
         $this->assertEquals(
             $expectedTransactionsFess,
             $actualTransactionsFees
@@ -58,20 +81,6 @@ class TransactionOperationTest extends TestCase
         );
     }
 
-    public function testCalculateAllTransactions()
-    {
-        $allTransactions = array_merge($this->privateCustomerTransactions,$this->businessCustomerTransactions);
-
-        $actualTransactionsFees = TransactionOperation::calculateTransactions($allTransactions);
-
-        $expectedTransactionsFess = ['0.60', '3.00', '0', '0.06','1.50', '3.00'];
-
-        $this->assertEquals(
-            $expectedTransactionsFess,
-            $actualTransactionsFees
-        );
-
-    }
     private function generateTransaction($customer, $operation, $currency, $amount, $date): Transaction
     {
         return new Transaction($customer, $operation, $currency, $amount, $date);
