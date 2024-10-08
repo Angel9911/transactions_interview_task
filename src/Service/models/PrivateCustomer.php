@@ -4,9 +4,9 @@ namespace Interview\CommissionTask\Service\models;
 
 class PrivateCustomer extends Customer
 {
-    private $type = 'private';
+    private string $type = 'private';
 
-    public function __construct(string $id)
+    public function __construct(int $id)
     {
         parent::__construct($id, $this->type);
     }

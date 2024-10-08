@@ -9,7 +9,9 @@ use Interview\CommissionTask\Service\models\PrivateCustomer;
 use Interview\CommissionTask\Service\models\Transaction;
 use Interview\CommissionTask\Service\validators\Validation;
 
-
+/**
+ * Class handling with reading a file and returning transactions.
+ */
 class CSVTransactionFile implements TransactionFileInterface
 {
     /**
@@ -33,12 +35,12 @@ class CSVTransactionFile implements TransactionFileInterface
                 $arrayTransaction = explode(";", $data[0]);
 
                 $convertTransaction = [
-                    'date' => $arrayTransaction[0],
-                    'id' => $arrayTransaction[1],
-                    'account_type' => $arrayTransaction[2],
-                    'operation_type' => $arrayTransaction[3],
-                    'amount' => $arrayTransaction[4],
-                    'currency' => $arrayTransaction[5],
+                    'date' => (string)$arrayTransaction[0],
+                    'id' => (int)$arrayTransaction[1],
+                    'account_type' => (string)$arrayTransaction[2],
+                    'operation_type' => (string)$arrayTransaction[3],
+                    'amount' => (float)$arrayTransaction[4],
+                    'currency' => (string)$arrayTransaction[5],
                 ];
 
                 if(Validation::validateAsDate($convertTransaction['date'])
@@ -82,10 +84,10 @@ class CSVTransactionFile implements TransactionFileInterface
     /**
      * Return transaction object by passing following parameters
      * @param Customer $customer
-     * @param $paymentOperation
-     * @param $amount
-     * @param $currency
-     * @param $date
+     * @param string $paymentOperation
+     * @param float $amount
+     * @param string $currency
+     * @param string $date
      * @return Transaction
      */
     public function getTransactionDataFromFile(Customer $customer, $paymentOperation, $amount, $currency, $date): Transaction

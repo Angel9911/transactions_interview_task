@@ -2,6 +2,9 @@
 
 namespace Interview\CommissionTask\Service\validators;
 
+/**
+ * Validation class. Various system validations can be added here
+ */
 class Validation
 {
     private static string $dateFormat = 'Y-m-d';

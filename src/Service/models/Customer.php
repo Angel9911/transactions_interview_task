@@ -4,8 +4,8 @@ namespace Interview\CommissionTask\Service\models;
 
 class Customer
 {
-    private $id;
-    private $accountType;
+    private int $id;
+    private string $accountType;
 
     /**
      * @param $id

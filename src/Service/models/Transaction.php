@@ -4,13 +4,13 @@ namespace Interview\CommissionTask\Service\models;
 
 class Transaction
 {
-    private $customer;
-    private $operation;
-    private $currency;
-    private $amount;
-    private $date;
+    private Customer $customer;
+    private string $operation;
+    private string $currency;
+    private float $amount;
+    private string $date;
 
-    public function __construct(Customer $customer, $operation, $currency, $amount, $date)
+    public function __construct(Customer $customer, string $operation, string $currency, float $amount, string $date)
     {
         $this->customer = $customer;
         $this->operation = $operation;

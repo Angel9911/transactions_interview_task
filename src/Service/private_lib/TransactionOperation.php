@@ -5,6 +5,9 @@ namespace Interview\CommissionTask\Service\private_lib;
 use DateTime;
 use Interview\CommissionTask\Service\validators\TransactionOperationConstraints;
 
+/**
+ * Class handles with the main logic of the system. Calculation of fees for given transactions
+ */
 class TransactionOperation
 {
     static array $withdrawals = [];
@@ -47,7 +50,7 @@ class TransactionOperation
      * @param $amount
      * @return string
      */
-    private static function calculateDepositTransaction($amount)
+    private static function calculateDepositTransaction($amount): string
     {
         $fee = $amount * TransactionOperationConstraints::depositCommissionFee;
 
@@ -63,7 +66,7 @@ class TransactionOperation
      * @param $date
      * @return float|int|string
      */
-    private static function calculateWithdrawTransaction(int $customerId, string $accountType, $amount, $currency, $date)
+    private static function calculateWithdrawTransaction(int $customerId, string $accountType, $amount, $currency, $date): float|int|string
     {
         if($currency !== 'EUR'){
 
@@ -112,7 +115,7 @@ class TransactionOperation
      * @param $date
      * @return float|int
      */
-    private static function calculatePrivateWithdraw($customerId, $year, $weekNumber, $amount)
+    private static function calculatePrivateWithdraw($customerId, $year, $weekNumber, $amount): float|int|string
     {
         $freeLimit = 1000.00;
         $freeOperationsLimit = 3;
